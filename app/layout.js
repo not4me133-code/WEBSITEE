@@ -1,17 +1,17 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
+import { DM_Sans } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-dm-sans', display: 'swap' });
 
 export const metadata = {
-  title: 'ApexPrep · AP Test Prep Platform',
-  description: 'Score higher on AP exams with targeted drills, full-length practice tests, and readiness analytics.',
+  title: 'ApexPrep · Big Goals. Better AP Practice.',
+  description: 'Work toward your AP goals with focused practice, clear explanations, and a calmer study space. Explore the free ApexPrep demo.',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="font-sans antialiased bg-slate-50 text-slate-900">
+    <html lang="en" className={dmSans.variable}>
+      <body className="font-sans antialiased bg-background text-foreground">
         {children}
       </body>
     </html>
